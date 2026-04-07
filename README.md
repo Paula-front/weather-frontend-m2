@@ -56,6 +56,11 @@ weather-frontend-m2/
 3. Ejecutar el archivo `index.html` con Live Server
 
 ---
+## 📊 Fuente de datos
+
+Datos climáticos basados en información referencial con fines educativos.
+
+Fuente: https://www.meteochile.gob.cl/PortalDMC-web/index.xhtml
 
 ## 🌐 Repositorio público
 
