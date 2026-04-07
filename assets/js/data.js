@@ -3,95 +3,80 @@ const ciudades = [
     id: 1,
     nombre: "Arica",
     temperatura: 23,
-    estado: "Algunas nubes",
+    estado: "Despejado a nublado",
     humedad: "62%",
     viento: "18 km/h",
-    icono: "assets/img/clima/parcialmente-nublado.png",
     imagen: "assets/img/ciudades/arica.jpg",
     pronostico: [
-      { dia: "Lunes", max: 26, min: 20, estado: "Nubes y algo de sol" },
-      { dia: "Martes", max: 27, min: 20, estado: "Soleado a parcial" },
-      { dia: "Miércoles", max: 27, min: 18, estado: "Parcialmente soleado" },
-      { dia: "Jueves", max: 27, min: 18, estado: "Parcialmente soleado" },
-      { dia: "Viernes", max: 26, min: 19, estado: "Nubes y sol" },
-      { dia: "Sábado", max: 26, min: 19, estado: "Nubes y sol" },
-      { dia: "Domingo", max: 26, min: 18, estado: "Soleado" }
+      { dia: "Martes", min: 22, max: 26, estado: "Cubierto a despejado" },
+      { dia: "Miércoles", min: 22, max: 26, estado: "Nublado a parcial" },
+      { dia: "Jueves", min: 21, max: 25, estado: "Parcial a despejado" },
+      { dia: "Viernes", min: 21, max: 26, estado: "Parcial a despejado" },
+      { dia: "Sábado", min: 21, max: 25, estado: "Despejado" }
     ]
   },
   {
     id: 2,
     nombre: "Antofagasta",
-    temperatura: 19,
-    estado: "Despejado",
+    temperatura: 18,
+    estado: "Nublado",
     humedad: "64%",
     viento: "19 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/antofagasta.jpg",
     pronostico: [
-      { dia: "Lunes", max: 22, min: 16, estado: "Soleado" },
-      { dia: "Martes", max: 21, min: 16, estado: "Mayormente soleado" },
-      { dia: "Miércoles", max: 21, min: 16, estado: "Mayormente soleado" },
-      { dia: "Jueves", max: 20, min: 16, estado: "Parcialmente soleado" },
-      { dia: "Viernes", max: 20, min: 15, estado: "Mayormente soleado" },
-      { dia: "Sábado", max: 21, min: 15, estado: "Mucho sol" },
-      { dia: "Domingo", max: 20, min: 16, estado: "Mucho sol" }
+      { dia: "Martes", min: 17, max: 21, estado: "Cubierto a despejado" },
+      { dia: "Miércoles", min: 16, max: 21, estado: "Despejado" },
+      { dia: "Jueves", min: 16, max: 21, estado: "Despejado a parcial" },
+      { dia: "Viernes", min: 16, max: 22, estado: "Parcial" },
+      { dia: "Sábado", min: 16, max: 21, estado: "Despejado con viento" }
     ]
   },
   {
     id: 3,
     nombre: "La Serena",
-    temperatura: 14,
-    estado: "Despejado",
+    temperatura: 13,
+    estado: "Parcial",
     humedad: "87%",
     viento: "15 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/la-serena.jpg",
     pronostico: [
-      { dia: "Lunes", max: 17, min: 11, estado: "Nubes y algo de sol" },
-      { dia: "Martes", max: 18, min: 11, estado: "Soleado" },
-      { dia: "Miércoles", max: 18, min: 12, estado: "Soleado a parcial" },
-      { dia: "Jueves", max: 18, min: 12, estado: "Algunas nubes y luego sol" },
-      { dia: "Viernes", max: 18, min: 12, estado: "Soleado" },
-      { dia: "Sábado", max: 19, min: 12, estado: "Mucho sol" },
-      { dia: "Domingo", max: 20, min: 12, estado: "Parcialmente soleado" }
+      { dia: "Martes", min: 11, max: 18, estado: "Nublado a parcial" },
+      { dia: "Miércoles", min: 12, max: 15, estado: "Cubierto" },
+      { dia: "Jueves", min: 11, max: 16, estado: "Cubierto a parcial" },
+      { dia: "Viernes", min: 10, max: 17, estado: "Parcial a despejado" },
+      { dia: "Sábado", min: 11, max: 18, estado: "Despejado" }
     ]
   },
   {
     id: 4,
     nombre: "Valparaíso",
-    temperatura: 15,
+    temperatura: 14,
     estado: "Despejado",
     humedad: "52%",
     viento: "25 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/valparaiso.jpg",
     pronostico: [
-      { dia: "Lunes", max: 19, min: 11, estado: "Mucho sol" },
-      { dia: "Martes", max: 22, min: 9, estado: "Mucho sol" },
-      { dia: "Miércoles", max: 19, min: 8, estado: "Mucho sol" },
-      { dia: "Jueves", max: 16, min: 8, estado: "Mayormente soleado" },
-      { dia: "Viernes", max: 15, min: 12, estado: "Parcialmente soleado" },
-      { dia: "Sábado", max: 17, min: 8, estado: "Nubes y algo de sol" },
-      { dia: "Domingo", max: 20, min: 9, estado: "Mayormente nublado" }
+      { dia: "Martes", min: 10, max: 22, estado: "Despejado con viento" },
+      { dia: "Miércoles", min: 12, max: 19, estado: "Parcial a nublado" },
+      { dia: "Jueves", min: 11, max: 17, estado: "Cubierto" },
+      { dia: "Viernes", min: 12, max: 16, estado: "Cubierto a nublado" },
+      { dia: "Sábado", min: 12, max: 17, estado: "Parcial" }
     ]
   },
   {
     id: 5,
     nombre: "Santiago",
-    temperatura: 20,
+    temperatura: 14,
     estado: "Despejado",
     humedad: "85%",
     viento: "2 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/santiago.jpg",
     pronostico: [
-      { dia: "Lunes", max: 25, min: 9, estado: "Mucho sol" },
-      { dia: "Martes", max: 29, min: 9, estado: "Sol radiante" },
-      { dia: "Miércoles", max: 27, min: 9, estado: "Sol radiante" },
-      { dia: "Jueves", max: 26, min: 8, estado: "Mucho sol" },
-      { dia: "Viernes", max: 25, min: 12, estado: "Mucho sol" },
-      { dia: "Sábado", max: 23, min: 8, estado: "Parcialmente soleado" },
-      { dia: "Domingo", max: 25, min: 8, estado: "Mayormente nublado" }
+      { dia: "Martes", min: 9, max: 29, estado: "Despejado" },
+      { dia: "Miércoles", min: 11, max: 27, estado: "Despejado" },
+      { dia: "Jueves", min: 9, max: 26, estado: "Despejado" },
+      { dia: "Viernes", min: 10, max: 27, estado: "Despejado" },
+      { dia: "Sábado", min: 9, max: 24, estado: "Parcial" }
     ]
   },
   {
@@ -101,92 +86,77 @@ const ciudades = [
     estado: "Despejado",
     humedad: "50%",
     viento: "8 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/talca.jpg",
     pronostico: [
-      { dia: "Lunes", max: 26, min: 8, estado: "Sol y algunas nubes" },
-      { dia: "Martes", max: 25, min: 7, estado: "Algunas nubes y luego sol" },
-      { dia: "Miércoles", max: 25, min: 7, estado: "Mayormente soleado" },
-      { dia: "Jueves", max: 26, min: 7, estado: "Soleado a parcial" },
-      { dia: "Viernes", max: 26, min: 10, estado: "Mayormente soleado" },
-      { dia: "Sábado", max: 23, min: 10, estado: "Nubes y algo de sol" },
-      { dia: "Domingo", max: 24, min: 8, estado: "Nubes y sol" }
+      { dia: "Martes", min: 9, max: 23, estado: "Neblina a despejado" },
+      { dia: "Miércoles", min: 9, max: 22, estado: "Parcial" },
+      { dia: "Jueves", min: 7, max: 24, estado: "Nublado a despejado" },
+      { dia: "Viernes", min: 8, max: 24, estado: "Parcial a despejado" },
+      { dia: "Sábado", min: 9, max: 23, estado: "Nublado a despejado" }
     ]
   },
   {
     id: 7,
     nombre: "Concepción",
-    temperatura: 17,
+    temperatura: 14,
     estado: "Despejado",
     humedad: "52%",
     viento: "17 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/concepcion.jpg",
     pronostico: [
-      { dia: "Lunes", max: 21, min: 9, estado: "Nublado al comienzo y luego sol" },
-      { dia: "Martes", max: 20, min: 9, estado: "Soleado a parcial" },
-      { dia: "Miércoles", max: 20, min: 8, estado: "Soleado a parcial" },
-      { dia: "Jueves", max: 21, min: 8, estado: "Soleado a parcial" },
-      { dia: "Viernes", max: 19, min: 10, estado: "Sol radiante" },
-      { dia: "Sábado", max: 17, min: 11, estado: "Nublado" },
-      { dia: "Domingo", max: 19, min: 8, estado: "Sol brumoso" }
+      { dia: "Martes", min: 9, max: 20, estado: "Parcial a despejado" },
+      { dia: "Miércoles", min: 9, max: 17, estado: "Nublado a despejado" },
+      { dia: "Jueves", min: 8, max: 18, estado: "Parcial a despejado" },
+      { dia: "Viernes", min: 8, max: 18, estado: "Parcial a despejado" },
+      { dia: "Sábado", min: 10, max: 15, estado: "Nublado" }
     ]
   },
   {
     id: 8,
     nombre: "Valdivia",
-    temperatura: 15,
+    temperatura: 8,
     estado: "Despejado",
     humedad: "56%",
     viento: "6 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/valdivia.jpg",
     pronostico: [
-      { dia: "Lunes", max: 20, min: 6, estado: "Mayormente soleado" },
-      { dia: "Martes", max: 18, min: 7, estado: "Parcialmente soleado" },
-      { dia: "Miércoles", max: 19, min: 5, estado: "Parcialmente soleado" },
-      { dia: "Jueves", max: 19, min: 6, estado: "Soleado a parcial" },
-      { dia: "Viernes", max: 22, min: 9, estado: "Mayormente soleado" },
-      { dia: "Sábado", max: 14, min: 4, estado: "Lluvias por períodos" },
-      { dia: "Domingo", max: 15, min: 4, estado: "Sol brumoso" }
+      { dia: "Martes", min: 6, max: 19, estado: "Despejado a parcial" },
+      { dia: "Miércoles", min: 7, max: 20, estado: "Nublado a despejado" },
+      { dia: "Jueves", min: 6, max: 19, estado: "Parcial" },
+      { dia: "Viernes", min: 6, max: 22, estado: "Parcial a despejado" },
+      { dia: "Sábado", min: 10, max: 16, estado: "Lluvia" }
     ]
   },
   {
     id: 9,
     nombre: "Puerto Montt",
-    temperatura: 11,
+    temperatura: 9,
     estado: "Despejado",
     humedad: "69%",
     viento: "18 km/h",
-    icono: "assets/img/clima/soleado.png",
     imagen: "assets/img/ciudades/puerto-montt.jpg",
     pronostico: [
-      { dia: "Lunes", max: 14, min: 8, estado: "Nubes y algo de sol" },
-      { dia: "Martes", max: 15, min: 10, estado: "Parcialmente soleado" },
-      { dia: "Miércoles", max: 13, min: 9, estado: "Parcialmente soleado" },
-      { dia: "Jueves", max: 14, min: 7, estado: "Nubes y sol" },
-      { dia: "Viernes", max: 16, min: 10, estado: "Aumenta la nubosidad" },
-      { dia: "Sábado", max: 14, min: 6, estado: "Algunos chubascos" },
-      { dia: "Domingo", max: 15, min: 6, estado: "Nubes y sol" }
+      { dia: "Martes", min: 8, max: 16, estado: "Llovizna a despejado" },
+      { dia: "Miércoles", min: 9, max: 15, estado: "Nublado a despejado" },
+      { dia: "Jueves", min: 6, max: 14, estado: "Parcial" },
+      { dia: "Viernes", min: 5, max: 19, estado: "Parcial" },
+      { dia: "Sábado", min: 9, max: 15, estado: "Lluvia" }
     ]
   },
   {
     id: 10,
     nombre: "Punta Arenas",
-    temperatura: 9,
-    estado: "Algunas nubes",
+    temperatura: 8,
+    estado: "Viento y nubes",
     humedad: "59%",
     viento: "30 km/h",
-    icono: "assets/img/clima/viento.png",
     imagen: "assets/img/ciudades/punta-arenas.jpg",
     pronostico: [
-      { dia: "Lunes", max: 12, min: 7, estado: "Ventoso" },
-      { dia: "Martes", max: 12, min: 7, estado: "Lluvias y lloviznas" },
-      { dia: "Miércoles", max: 11, min: 8, estado: "Chubascos breves" },
-      { dia: "Jueves", max: 12, min: 4, estado: "Muy ventoso" },
-      { dia: "Viernes", max: 10, min: 4, estado: "Lluvias y lloviznas ocasionales" },
-      { dia: "Sábado", max: 9, min: 3, estado: "Algo de lluvia" },
-      { dia: "Domingo", max: 11, min: 7, estado: "Algo de lluvia" }
+      { dia: "Martes", min: 6, max: 11, estado: "Viento y lluvia" },
+      { dia: "Miércoles", min: 8, max: 11, estado: "Lluvia y viento" },
+      { dia: "Jueves", min: 8, max: 11, estado: "Lluvia y viento fuerte" },
+      { dia: "Viernes", min: 4, max: 9, estado: "Chubascos" },
+      { dia: "Sábado", min: 4, max: 8, estado: "Lluvia" }
     ]
   }
 ];

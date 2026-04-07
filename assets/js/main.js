@@ -1,9 +1,40 @@
 const contenedorCiudades = document.getElementById("contenedor-ciudades");
 
+function obtenerIcono(estado) {
+  const texto = estado.toLowerCase();
+
+  if (
+    texto.includes("lluvia") ||
+    texto.includes("llovizna") ||
+    texto.includes("chubasc")
+  ) {
+    return "assets/img/clima/lluvia.png";
+  }
+
+  if (texto.includes("viento")) {
+    return "assets/img/clima/viento.png";
+  }
+
+  if (texto.includes("cubierto") || texto.includes("nublado")) {
+    if (texto.includes("despejado") || texto.includes("parcial")) {
+      return "assets/img/clima/parcialmente-nublado.png";
+    }
+    return "assets/img/clima/nublado.png";
+  }
+
+  if (texto.includes("parcial")) {
+    return "assets/img/clima/parcialmente-nublado.png";
+  }
+
+  return "assets/img/clima/soleado.png";
+}
+
 function mostrarCiudades() {
   contenedorCiudades.innerHTML = "";
 
   ciudades.forEach((ciudad) => {
+    const iconoActual = obtenerIcono(ciudad.estado);
+
     const columna = document.createElement("div");
     columna.className = "col-12 col-sm-6 col-lg-4";
 
@@ -19,7 +50,7 @@ function mostrarCiudades() {
           <div class="d-flex align-items-center justify-content-between mb-3">
             <h3 class="card-title h5 mb-0">${ciudad.nombre}</h3>
             <img 
-              src="${ciudad.icono}" 
+              src="${iconoActual}" 
               alt="${ciudad.estado}" 
               class="icono-clima"
             >
@@ -52,11 +83,9 @@ function agregarEventosBotones() {
   botones.forEach((boton) => {
     boton.addEventListener("click", () => {
       const idCiudad = Number(boton.dataset.id);
-
       const ciudadSeleccionada = ciudades.find((ciudad) => ciudad.id === idCiudad);
 
       localStorage.setItem("ciudadSeleccionada", JSON.stringify(ciudadSeleccionada));
-
       window.location.href = "detalle.html";
     });
   });
