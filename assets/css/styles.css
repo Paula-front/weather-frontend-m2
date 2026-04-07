@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+  background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  color: #f8fafc;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.35), rgba(59, 130, 246, 0.2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Navbar */
+.navbar-brand {
+  letter-spacing: 0.3px;
+}
+
+/* Tarjetas de ciudades */
+.tarjeta-ciudad {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-ciudad:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+}
+
+.imagen-ciudad {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.icono-clima {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  background-color: #000;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.card-title,
+.card-text,
+.card-body {
+  color: #f8fafc;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.btn-outline-light:hover {
+  color: #0f172a;
+}
+
+/* Sección acerca de */
+.seccion-acerca {
+  background-color: rgba(30, 41, 59, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Detalle */
+.detalle-card {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+}
+
+.imagen-detalle {
+  min-height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.icono-detalle {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background-color: #000;
+  padding: 8px;
+  border-radius: 14px;
+}
+
+/* Tarjetas del pronóstico */
+.tarjeta-pronostico {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+  color: #f8fafc;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-pronostico:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+}
+
+/* Textos secundarios */
+.text-light-subtle {
+  color: rgba(248, 250, 252, 0.72) !important;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .hero {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .imagen-ciudad {
+    height: 200px;
+  }
+
+  .icono-clima {
+    width: 46px;
+    height: 46px;
+  }
+
+  .icono-detalle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
