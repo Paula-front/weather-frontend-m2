@@ -158,5 +158,37 @@ const ciudades = [
       { dia: "Viernes", min: 4, max: 9, estado: "Chubascos" },
       { dia: "Sábado", min: 4, max: 8, estado: "Lluvia" }
     ]
+  },
+  {
+    id: 11,
+    nombre: "Rapa Nui",
+    temperatura: 25,
+    estado: "Nublado y chubascos",
+    humedad: "78%",
+    viento: "30 km/h",
+    imagen: "assets/img/ciudades/rapa-nui.jpg",
+    pronostico: [
+      { dia: "Miércoles", max: 27, min: 20, estado: "Nublado con chubascos" },
+      { dia: "Jueves", max: 26, min: 19, estado: "Parcialmente nublado" },
+      { dia: "Viernes", max: 26, min: 19, estado: "Nublado con chubascos" },
+      { dia: "Sábado", max: 26, min: 20, estado: "Parcialmente nublado" },
+      { dia: "Domingo", max: 26, min: 18, estado: "Parcialmente nublado" }
+    ]
+  },
+  {
+    id: 12,
+    nombre: "Juan Fernández",
+    temperatura: 18,
+    estado: "Nublado con viento",
+    humedad: "85%",
+    viento: "40 km/h",
+    imagen: "assets/img/ciudades/juan-fernandez.jpg",
+    pronostico: [
+      { dia: "Miércoles", max: 19, min: 16, estado: "Nublado con viento" },
+      { dia: "Jueves", max: 18, min: 15, estado: "Llovizna y viento" },
+      { dia: "Viernes", max: 18, min: 16, estado: "Llovizna" },
+      { dia: "Sábado", max: 19, min: 17, estado: "Cubierto" },
+      { dia: "Domingo", max: 20, min: 16, estado: "Nublado con viento" }
+    ]
   }
 ];
