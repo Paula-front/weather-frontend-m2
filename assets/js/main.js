@@ -1,4 +1,4 @@
-const contenedorCiudades = document.getElementById("contenedor-ciudades");
+const contenedorCiudades = document.getElementById("placesGrid");
 
 function obtenerIcono(estado) {
   const texto = estado.toLowerCase();
@@ -30,43 +30,45 @@ function obtenerIcono(estado) {
 }
 
 function mostrarCiudades() {
+  if (!contenedorCiudades) return;
+
   contenedorCiudades.innerHTML = "";
 
   ciudades.forEach((ciudad) => {
-    const iconoActual = obtenerIcono(ciudad.estado);
+    const iconoActual = ciudad.icono || obtenerIcono(ciudad.estado);
 
     const columna = document.createElement("div");
-    columna.className = "col-12 col-sm-6 col-lg-4";
+    columna.className = "col-12 col-md-6 col-lg-4";
 
     columna.innerHTML = `
-      <article class="card h-100 shadow tarjeta-ciudad">
-        <img 
-          src="${ciudad.imagen}" 
-          class="card-img-top imagen-ciudad" 
-          alt="Imagen de ${ciudad.nombre}"
-        >
+      <article class="place-card">
+        <img
+          src="${ciudad.imagen}"
+          class="place-card__image"
+          alt="Vista de ${ciudad.nombre}"
+        />
 
-        <div class="card-body d-flex flex-column">
-          <div class="d-flex align-items-center justify-content-between mb-3">
-            <h3 class="card-title h5 mb-0">${ciudad.nombre}</h3>
-            <img 
-              src="${iconoActual}" 
-              alt="${ciudad.estado}" 
-              class="icono-clima"
-            >
+        <div class="place-card__body">
+          <div class="place-card__top">
+            <h3 class="place-card__title">${ciudad.nombre}</h3>
+            <img
+              src="${iconoActual}"
+              alt="Ícono del clima ${ciudad.estado}"
+              class="place-card__icon"
+            />
           </div>
 
-          <p class="card-text mb-2">
-            <strong>Temperatura:</strong> ${ciudad.temperatura}°C
-          </p>
+          <p class="place-card__temp">${ciudad.temperatura}°C</p>
+          <p class="place-card__status">${ciudad.estado}</p>
 
-          <p class="card-text mb-3">
-            <strong>Estado:</strong> ${ciudad.estado}
-          </p>
-
-          <button class="btn btn-primary mt-auto boton-detalle" data-id="${ciudad.id}">
-            Ver detalle
-          </button>
+          <div class="place-card__actions">
+            <button
+              class="place-card__button btn btn-primary"
+              data-id="${ciudad.id}"
+            >
+              Ver detalle
+            </button>
+          </div>
         </div>
       </article>
     `;
@@ -78,14 +80,20 @@ function mostrarCiudades() {
 }
 
 function agregarEventosBotones() {
-  const botones = document.querySelectorAll(".boton-detalle");
+  const botones = document.querySelectorAll(".place-card__button");
 
   botones.forEach((boton) => {
     boton.addEventListener("click", () => {
-      const idCiudad = Number(boton.dataset.id);
-      const ciudadSeleccionada = ciudades.find((ciudad) => ciudad.id === idCiudad);
+      const idCiudad = boton.dataset.id;
+      const ciudadSeleccionada = ciudades.find(
+        (ciudad) => ciudad.id === idCiudad
+      );
 
-      localStorage.setItem("ciudadSeleccionada", JSON.stringify(ciudadSeleccionada));
+      localStorage.setItem(
+        "ciudadSeleccionada",
+        JSON.stringify(ciudadSeleccionada)
+      );
+
       window.location.href = "detalle.html";
     });
   });

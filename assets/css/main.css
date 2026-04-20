@@ -1,0 +1,437 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+body.weather-app {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, rgba(8, 13, 24, 0.92) 0%, rgba(11, 18, 32, 0.98) 100%);
+  color: #f5f7fb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.weather-app__main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #f5f7fb;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+p {
+  color: #c8d2e3;
+  line-height: 1.7;
+}
+
+.site-header__title,
+.hero__badge,
+.place-card__status,
+.forecast-card__status,
+.weather-detail__status {
+  letter-spacing: 0.01em;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.site-header__nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.site-header__container {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+.site-header__brand {
+  font-weight: 700;
+}
+.site-header__title {
+  color: #f5f7fb;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.site-header__menu {
+  gap: 0.25rem;
+}
+.site-header__link {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.site-header__link:hover, .site-header__link.active {
+  color: #f5f7fb !important;
+}
+
+.weather-app__main {
+  padding-bottom: 3rem;
+}
+
+.places-section,
+.about-section,
+.detail-section,
+.forecast-section {
+  padding: 3rem 0;
+}
+
+.places-section__header,
+.detail-section__header,
+.forecast-section__header {
+  margin-bottom: 2rem;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 12, 22, 0.85);
+  padding: 2rem 0;
+}
+.site-footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+}
+.site-footer__text {
+  color: #f5f7fb;
+  font-weight: 600;
+}
+.site-footer__author, .site-footer__year {
+  color: #97a6bf;
+  font-size: 0.95rem;
+}
+
+.place-card__button,
+.weather-detail__button {
+  background-color: #2f80ed;
+  border: none;
+  color: #f5f7fb;
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.75rem 1.35rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.place-card__button:hover,
+.weather-detail__button:hover {
+  background-color: #1f6ed6;
+  color: #f5f7fb;
+  transform: translateY(-2px);
+}
+
+.place-card {
+  background: rgba(20, 30, 48, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.place-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.38);
+}
+.place-card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.place-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 220px;
+}
+.place-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.place-card__title {
+  margin: 0;
+  color: #f5f7fb;
+  font-size: 1.2rem;
+}
+.place-card__icon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.place-card__temp {
+  color: #f5f7fb;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+.place-card__status {
+  color: #c8d2e3;
+  font-size: 1rem;
+}
+.place-card__actions {
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+.place-card__button {
+  width: 100%;
+}
+
+.detail-section__title {
+  margin-bottom: 0.25rem;
+}
+
+.weather-detail__card {
+  background: rgba(20, 30, 48, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+.weather-detail__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 320px;
+}
+.weather-detail__content {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.weather-detail__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.weather-detail__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.weather-detail__icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.weather-detail__temp {
+  color: #f5f7fb;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.weather-detail__status {
+  color: #c8d2e3;
+  font-size: 1.05rem;
+}
+.weather-detail__meta {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+  margin-top: 0.25rem;
+}
+@media (min-width: 768px) {
+  .weather-detail__meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.weather-detail__humidity, .weather-detail__wind {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+  color: #f5f7fb;
+}
+.weather-detail__actions {
+  padding-top: 0.75rem;
+}
+
+.hero {
+  padding: 4.5rem 0 3rem;
+  position: relative;
+}
+.hero--detail {
+  padding-bottom: 2.5rem;
+}
+.hero__container {
+  position: relative;
+  z-index: 1;
+}
+.hero__content {
+  background: rgba(20, 30, 48, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: linear-gradient(135deg, rgba(47, 128, 237, 0.18), rgba(86, 204, 242, 0.08)), linear-gradient(180deg, rgba(17, 26, 43, 0.96), rgba(12, 20, 34, 0.98));
+}
+.hero__badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(86, 204, 242, 0.12);
+  color: #56ccf2;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.hero__title {
+  max-width: 900px;
+  margin-bottom: 1rem;
+}
+.hero__text {
+  max-width: 760px;
+  color: #c8d2e3;
+  font-size: 1.05rem;
+}
+
+.forecast-section__title {
+  margin-bottom: 0.35rem;
+}
+.forecast-section__text {
+  max-width: 560px;
+}
+
+.forecast-card {
+  background: rgba(20, 30, 48, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  height: 100%;
+}
+.forecast-card__body {
+  padding: 1.5rem;
+  text-align: center;
+}
+.forecast-card__day {
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+.forecast-card__icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.forecast-card__temp {
+  color: #f5f7fb;
+  margin-bottom: 0.35rem;
+}
+.forecast-card__temp--max {
+  font-weight: 700;
+}
+.forecast-card__temp--min {
+  color: #c8d2e3;
+}
+.forecast-card__status {
+  margin-top: 0.75rem;
+  color: #c8d2e3;
+  font-size: 0.96rem;
+}
+
+.places-section__title {
+  margin-bottom: 0.35rem;
+}
+.places-section__text {
+  max-width: 620px;
+}
+
+.about-section__content {
+  background: linear-gradient(180deg, rgba(18, 26, 43, 0.92), rgba(13, 20, 34, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+.about-section__title {
+  margin-bottom: 1rem;
+}
+.about-section__text {
+  max-width: 760px;
+}
+
+.hero--detail .hero__content {
+  max-width: 100%;
+}
+
+.detail-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.forecast-section {
+  padding-top: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

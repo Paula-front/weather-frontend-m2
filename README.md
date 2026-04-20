@@ -1,74 +1,99 @@
-# 🌦️ Weather Frontend M2
+# 🌦️ App del Clima de Ciudades de Chile
 
 ## 📌 Descripción
-Este proyecto corresponde al desarrollo de un MVP frontend de una aplicación del clima para distintas ciudades de Chile.
 
-Permite visualizar el clima actual de 10 localidades y acceder a una vista de detalle con pronóstico semanal.
+Este proyecto corresponde al desarrollo de una aplicación web que permite visualizar el clima actual y el pronóstico semanal de distintas ciudades de Chile.
+
+El usuario puede explorar distintas localidades desde la página principal y acceder a una vista de detalle donde se muestra información más completa, incluyendo temperatura, estado del tiempo, humedad, viento y pronóstico de los próximos días.
+
+---
+
+## 🎯 Objetivo del proyecto
+
+Refactorizar la aplicación desarrollada en el módulo anterior, enfocándose en:
+
+- Organización de la interfaz
+- Mejora del diseño visual
+- Uso de metodología de estilos
+- Modularización con SASS
+- Implementación de layout responsivo con Bootstrap
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
-- HTML5 semántico
-- CSS3
-- Bootstrap 5
-- JavaScript (Vanilla JS)
+
+- **HTML5** (estructura semántica)
+- **CSS3 + SASS (SCSS)** (estilos y modularización)
+- **Bootstrap 5** (layout responsivo y componentes)
+- **JavaScript (Vanilla JS)** (interacción y render dinámico)
+- **LocalStorage** (persistencia de la ciudad seleccionada)
 
 ---
 
-## 📂 Estructura del proyecto
+## 🧩 Funcionalidades principales
 
-```
-weather-frontend-m2/
-│
-├── index.html
-├── detalle.html
-├── README.md
-│
-└── assets/
-    ├── css/
-    │   └── styles.css
-    ├── js/
-    │   ├── data.js
-    │   ├── detalle.js
-    │   └── main.js
-    └── img/
-        ├── ciudades/
-        └── clima/     
-```
-
----
-
-## ⚙️ Funcionalidades
-
-- Visualización de 10 ciudades de Chile
-- Tarjetas dinámicas con información climática
+- Visualización del clima actual de distintas ciudades
+- Cards dinámicas con:
+  - Imagen de la ciudad
+  - Temperatura
+  - Estado del clima
+  - Icono representativo
 - Navegación a vista de detalle
-- Uso de localStorage para transferencia de datos
+- Visualización de:
+  - Temperatura actual
+  - Estado del clima
+  - Humedad
+  - Viento
 - Pronóstico semanal por ciudad
-- Diseño responsivo (mobile-first)
+- Navegación entre páginas
 
 ---
 
-## 🚀 Cómo ejecutar el proyecto
+## 🎨 Metodología de estilos (BEM)
 
-1. Descargar o clonar el repositorio
-2. Abrir la carpeta en Visual Studio Code
-3. Ejecutar el archivo `index.html` con Live Server
+Se utilizó la metodología **BEM (Block, Element, Modifier)** para mantener un código CSS claro, escalable y fácil de mantener.
+
+### Ejemplo:
+place-card
+place-card__title
+place-card__button
+place-card--sunny
+
+
+Esto permite:
+
+- Separar responsabilidades
+- Evitar conflictos de estilos
+- Mejorar la legibilidad del código
 
 ---
-## 📊 Fuente de datos
 
-Datos climáticos basados en información referencial con fines educativos.
+## 🎯 Uso de SASS (SCSS)
 
-Fuente: https://www.meteochile.gob.cl/PortalDMC-web/index.xhtml
+Se implementó SASS para modularizar los estilos mediante una estructura organizada basada en el patrón 7-1.
 
-## 🌐 Repositorio público
+### Estructura utilizada:
+scss/
+├── abstracts/
+│ ├── _variables.scss
+│ └── _mixins.scss
+├── base/
+│ ├── _reset.scss
+│ ├── _base.scss
+│ └── _typography.scss
+├── layout/
+│ ├── _header.scss
+│ ├── _main.scss
+│ └── _footer.scss
+├── components/
+│ ├── _card.scss
+│ ├── _detalle.scss
+│ ├── _hero.scss
+│ └── _pronostico.scss
+├── pages/
+│ ├── _home.scss
+│ └── _detalle-page.scss
+└── main.scss
 
-👉 https://github.com/Paula-front/weather-frontend-m2
-
----
-
-## 👩‍💻 Autor
-
-Proyecto desarrollado por **Paula Front**  
-Curso: Desarrollo de Aplicaciones Front-End Trainee V2.0
+El archivo `main.scss` centraliza todos los estilos y se compila automáticamente a:
+assets/css/main.css

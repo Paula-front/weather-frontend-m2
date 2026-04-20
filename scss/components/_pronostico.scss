@@ -1,0 +1,53 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.forecast-section {
+  &__title {
+    margin-bottom: 0.35rem;
+  }
+
+  &__text {
+    max-width: 560px;
+  }
+}
+
+.forecast-card {
+  @include m.card-base;
+  height: 100%;
+
+  &__body {
+    padding: v.$space-lg;
+    text-align: center;
+  }
+
+  &__day {
+    margin-bottom: v.$space-md;
+    font-size: 1.15rem;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: v.$space-md;
+  }
+
+  &__temp {
+    color: v.$color-text;
+    margin-bottom: 0.35rem;
+
+    &--max {
+      font-weight: 700;
+    }
+
+    &--min {
+      color: v.$color-text-soft;
+    }
+  }
+
+  &__status {
+    margin-top: v.$space-sm;
+    color: v.$color-text-soft;
+    font-size: 0.96rem;
+  }
+}

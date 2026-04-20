@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as v;
+
+.hero--detail {
+  .hero__content {
+    max-width: 100%;
+  }
+}
+
+.detail-section {
+  padding-top: v.$space-xl;
+  padding-bottom: v.$space-xl;
+}
+
+.forecast-section {
+  padding-top: 0;
+}

@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.site-footer {
+  border-top: 1px solid v.$color-border;
+  background: rgba(7, 12, 22, 0.85);
+  padding: v.$space-xl 0;
+
+  &__container {
+    @include m.flex-center(center, center, column);
+    gap: 0.4rem;
+    text-align: center;
+  }
+
+  &__text {
+    color: v.$color-text;
+    font-weight: 600;
+  }
+
+  &__author,
+  &__year {
+    color: v.$color-text-muted;
+    font-size: 0.95rem;
+  }
+}

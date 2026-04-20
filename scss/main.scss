@@ -1,0 +1,19 @@
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+@use "base/reset";
+@use "base/base";
+@use "base/typography";
+
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+
+@use "components/boton";
+@use "components/card";
+@use "components/detalle";
+@use "components/hero";
+@use "components/pronostico";
+
+@use "pages/home";
+@use "pages/detalle-page";
