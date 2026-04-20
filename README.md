@@ -97,3 +97,46 @@ scss/
 
 El archivo `main.scss` centraliza todos los estilos y se compila automáticamente a:
 assets/css/main.css
+
+
+---
+
+## 📂 Estructura del proyecto
+weather-frontend-m3/
+│
+├── index.html
+├── detalle.html
+├── README.md
+│
+├── scss/
+│ └── (estructura SASS)
+│
+├── assets/
+│ ├── css/
+│ │ └── main.css
+│ ├── js/
+│ │ ├── data.js
+│ │ ├── main.js
+│ │ └── detalle.js
+│ └── img/
+│ ├── ciudades/
+│ └── clima/
+
+
+---
+
+## 🔗 Enlace del repositorio
+
+👉 (https://github.com/Paula-front/weather-frontend-m3.git)
+
+---
+
+## 👩‍💻 Autor
+
+**Paula Pérez Valenzuela**
+
+---
+
+## 📅 Año
+
+2026
