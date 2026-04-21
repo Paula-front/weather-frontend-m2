@@ -1,142 +1,74 @@
-# 🌦️ App del Clima de Ciudades de Chile
+# 🌦️ Weather Frontend M2
 
 ## 📌 Descripción
+Este proyecto corresponde al desarrollo de un MVP frontend de una aplicación del clima para distintas ciudades de Chile.
 
-Este proyecto corresponde al desarrollo de una aplicación web que permite visualizar el clima actual y el pronóstico semanal de distintas ciudades de Chile.
-
-El usuario puede explorar distintas localidades desde la página principal y acceder a una vista de detalle donde se muestra información más completa, incluyendo temperatura, estado del tiempo, humedad, viento y pronóstico de los próximos días.
-
----
-
-## 🎯 Objetivo del proyecto
-
-Refactorizar la aplicación desarrollada en el módulo anterior, enfocándose en:
-
-- Organización de la interfaz
-- Mejora del diseño visual
-- Uso de metodología de estilos
-- Modularización con SASS
-- Implementación de layout responsivo con Bootstrap
+Permite visualizar el clima actual de 10 localidades y acceder a una vista de detalle con pronóstico semanal.
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
-
-- **HTML5** (estructura semántica)
-- **CSS3 + SASS (SCSS)** (estilos y modularización)
-- **Bootstrap 5** (layout responsivo y componentes)
-- **JavaScript (Vanilla JS)** (interacción y render dinámico)
-- **LocalStorage** (persistencia de la ciudad seleccionada)
-
----
-
-## 🧩 Funcionalidades principales
-
-- Visualización del clima actual de distintas ciudades
-- Cards dinámicas con:
-  - Imagen de la ciudad
-  - Temperatura
-  - Estado del clima
-  - Icono representativo
-- Navegación a vista de detalle
-- Visualización de:
-  - Temperatura actual
-  - Estado del clima
-  - Humedad
-  - Viento
-- Pronóstico semanal por ciudad
-- Navegación entre páginas
-
----
-
-## 🎨 Metodología de estilos (BEM)
-
-Se utilizó la metodología **BEM (Block, Element, Modifier)** para mantener un código CSS claro, escalable y fácil de mantener.
-
-### Ejemplo:
-place-card
-place-card__title
-place-card__button
-place-card--sunny
-
-
-Esto permite:
-
-- Separar responsabilidades
-- Evitar conflictos de estilos
-- Mejorar la legibilidad del código
-
----
-
-## 🎯 Uso de SASS (SCSS)
-
-Se implementó SASS para modularizar los estilos mediante una estructura organizada basada en el patrón 7-1.
-
-### Estructura utilizada:
-scss/
-├── abstracts/
-│ ├── _variables.scss
-│ └── _mixins.scss
-├── base/
-│ ├── _reset.scss
-│ ├── _base.scss
-│ └── _typography.scss
-├── layout/
-│ ├── _header.scss
-│ ├── _main.scss
-│ └── _footer.scss
-├── components/
-│ ├── _card.scss
-│ ├── _detalle.scss
-│ ├── _hero.scss
-│ └── _pronostico.scss
-├── pages/
-│ ├── _home.scss
-│ └── _detalle-page.scss
-└── main.scss
-
-El archivo `main.scss` centraliza todos los estilos y se compila automáticamente a:
-assets/css/main.css
-
+- HTML5 semántico
+- CSS3
+- Bootstrap 5
+- JavaScript (Vanilla JS)
 
 ---
 
 ## 📂 Estructura del proyecto
-weather-frontend-m3/
+
+```
+weather-frontend-m2/
 │
 ├── index.html
 ├── detalle.html
 ├── README.md
 │
-├── scss/
-│ └── (estructura SASS)
-│
-├── assets/
-│ ├── css/
-│ │ └── main.css
-│ ├── js/
-│ │ ├── data.js
-│ │ ├── main.js
-│ │ └── detalle.js
-│ └── img/
-│ ├── ciudades/
-│ └── clima/
-
+└── assets/
+    ├── css/
+    │   └── styles.css
+    ├── js/
+    │   ├── data.js
+    │   ├── detalle.js
+    │   └── main.js
+    └── img/
+        ├── ciudades/
+        └── clima/     
+```
 
 ---
 
-## 🔗 Enlace del repositorio
+## ⚙️ Funcionalidades
 
-👉 (https://github.com/Paula-front/weather-frontend-m3.git)
+- Visualización de 10 ciudades de Chile
+- Tarjetas dinámicas con información climática
+- Navegación a vista de detalle
+- Uso de localStorage para transferencia de datos
+- Pronóstico semanal por ciudad
+- Diseño responsivo (mobile-first)
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Descargar o clonar el repositorio
+2. Abrir la carpeta en Visual Studio Code
+3. Ejecutar el archivo `index.html` con Live Server
+
+---
+## 📊 Fuente de datos
+
+Datos climáticos basados en información referencial con fines educativos.
+
+Fuente: https://www.meteochile.gob.cl/PortalDMC-web/index.xhtml
+
+## 🌐 Repositorio público
+
+👉 https://github.com/Paula-front/weather-frontend-m2
 
 ---
 
 ## 👩‍💻 Autor
 
-**Paula Pérez Valenzuela**
-
----
-
-## 📅 Año
-
-2026
+Proyecto desarrollado por **Paula Front**  
+Curso: Desarrollo de Aplicaciones Front-End Trainee V2.0
