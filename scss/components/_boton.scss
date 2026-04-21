@@ -1,6 +1,0 @@
-@use "../abstracts/mixins" as m;
-
-.place-card__button,
-.weather-detail__button {
-  @include m.button-primary;
-}
